@@ -12,5 +12,9 @@ To make a .txt flat file for UPP, follow these steps within the parm/ directory:
 
       perl PostXMLPreprocessor.pl fv3lam_rrfs.xml fv3lam_post_avblflds.xml postxconfig-NT-fv3lam_rrfs.txt
 
-   A log file will be created by this script, in addition to the flat file.
+   In this example, "fv3lam_rrfs.xml" and "fv3lam_post_avblflds.xml" are input files, read by the perl 
+   script. The "postxconfig-NT-fv3lam_rrfs.txt" flat file is the output file produced by the script, which 
+   can have any name.
+
+   Note that a log file will be created by this script, in addition to the flat file.
 
