@@ -1126,7 +1126,7 @@
                 rlatmax = gfld%igdtmpl(10)/scale_factor
                 rlonmin = gfld%igdtmpl(11)/scale_factor
 !                write(*,*) 'nx,ny=',nx,ny
-!                write(*,*) 'dx,dy=',rdx,rd
+!                write(*,*) 'dx,dy=',rdx,rdy
 !                write(*,*) 'lat1,lon1=',rlatmax,rlonmin
              else
                  write(*,*) 'unknown projection'
@@ -1263,11 +1263,10 @@
              else if (gfld%igdtnum.eq.1) then ! Rotated Lat Lon Grid (RRFS_NA)
                 nx = gfld%igdtmpl(8)
                 ny = gfld%igdtmpl(9)
-                nz = 1
-                rdx = gfld%igdtmpl(17)/scale_factor
-                rdy = gfld%igdtmpl(18)/scale_factor
-                rlatmax = gfld%igdtmpl(12)/scale_factor
-                rlonmin = gfld%igdtmpl(13)/scale_factor
+                dx = gfld%igdtmpl(17)/scale_factor
+                dy = gfld%igdtmpl(18)/scale_factor
+                lat1 = gfld%igdtmpl(12)/scale_factor
+                lon1 = gfld%igdtmpl(13)/scale_factor
 !                write(*,*) 'nx,ny=',nx,ny
 !                write(*,*) 'dx,dy=',rdx,rdy
 !                write(*,*) 'lat1,lon1=',rlatmax,rlonmin
