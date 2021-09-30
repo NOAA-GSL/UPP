@@ -480,7 +480,11 @@
           IM_JM = IM*JM
 ! set NSOIL to 4 as default for NOAH but change if using other
 ! SFC scheme
-          NSOIL = 4
+          if (modelname == 'FV3R') then
+             NSOIL = 9
+          else
+             NSOIL = 4
+          endif
 
           print*,'im jm lm nsoil from fv3 output = ',im,jm,lm,nsoil 
          END IF 
