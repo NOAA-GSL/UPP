@@ -208,19 +208,16 @@
        if(me==0)print*,'ak5= ',ak5
       end if
       IF (MODELNAME == 'FV3R') THEN
-        Status=nf90_get_att(ncid3d,nf90_global,'landsfcmdl', &
-             iSF_SURFACE_PHYSICS)
-        print*,'RRFS: use landsfcmdl for LSM index!'
+        iSF_SURFACE_PHYSICS=3
       ELSE
         Status=nf90_get_att(ncid3d,nf90_global,'sf_surface_physi', &
              iSF_SURFACE_PHYSICS)
+        if(Status/=0)then
+          print*,'sf_surface_physi not found; assigning to 2'
+          iSF_SURFACE_PHYSICS=2 !set LSM physics to 2 for NOAH
+        endif
       END IF
-      if(Status/=0)then
-       print*,'sf_surface_physi not found; assigning to 2'
-       iSF_SURFACE_PHYSICS=2 !set LSM physics to 2 for NOAH
-      else
-       if(me==0)print*,'SF_SURFACE_PHYSICS= ',iSF_SURFACE_PHYSICS
-      endif
+      if(me==0)print*,'SF_SURFACE_PHYSICS= ',iSF_SURFACE_PHYSICS
       Status=nf90_get_att(ncid3d,nf90_global,'idrt',idrt)
       if(Status/=0)then
        print*,'idrt not in netcdf file,reading grid'
