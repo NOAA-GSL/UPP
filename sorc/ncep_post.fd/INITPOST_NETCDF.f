@@ -1763,6 +1763,8 @@
       enddo
      if(debugprint)print*,'sample l',VarName,' = ',1,smc(isa,jsa,4)
 
+      IF (NSOIL==9) THEN
+
       VarName='soilw5'
       call read_netcdf_2d_scatter(me,ncid2d,1,im,jm,jsta,jsta_2l &
        ,jend_2u,MPI_COMM_COMP,icnt,idsp,spval,VarName,smc(1,jsta_2l,5))
@@ -1823,6 +1825,8 @@
       enddo
      if(debugprint)print*,'sample l',VarName,' = ',1,smc(isa,jsa,9)
 
+      END IF
+
 ! soil temperature using nemsio
       VarName='soilt1'
       call read_netcdf_2d_scatter(me,ncid2d,1,im,jm,jsta,jsta_2l &
@@ -1875,6 +1879,8 @@
         enddo
       enddo
      if(debugprint)print*,'sample stc = ',1,stc(isa,jsa,4)
+
+      IF (NSOIL==9) THEN
 
       VarName='soilt5'
       call read_netcdf_2d_scatter(me,ncid2d,1,im,jm,jsta,jsta_2l &
@@ -1940,6 +1946,8 @@
         enddo
       enddo
      if(debugprint)print*,'sample stc = ',1,stc(isa,jsa,9)
+
+      END IF
 
 !$omp parallel do private(i,j)
       do j=jsta,jend
