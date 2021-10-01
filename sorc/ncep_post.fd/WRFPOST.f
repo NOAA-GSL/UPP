@@ -450,14 +450,12 @@
             stop
           endif
 ! read in LSM index and nsoil here
-          Status=nf90_get_att(ncid2d,nf90_global,'landsfcmdl', &
-                 iSF_SURFACE_PHYSICS)
+          Status=nf90_get_att(ncid2d,nf90_global,'landsfcmdl', iSF_SURFACE_PHYSICS)
           if(Status/=0)then
             print*,'landsfcmdl not found; assigning to 2'
             iSF_SURFACE_PHYSICS=2 !set LSM physics to 2 for NOAH
           endif
-          Status=nf90_get_att(ncid2d,nf90_global,'nsoil', &
-                 NSOIL)
+          Status=nf90_get_att(ncid2d,nf90_global,'nsoil', NSOIL)
           if(Status/=0)then
             print*,'nsoil not found; assigning to 4'
             NSOIL=4 !set nsoil to 4 for NOAH
