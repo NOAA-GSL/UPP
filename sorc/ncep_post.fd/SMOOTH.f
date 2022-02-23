@@ -96,7 +96,7 @@
          IF (FIELD(I,IY) < 9E10 .AND. FIELD(I-1,IY) < 9E10 .AND.      &
              FIELD(I+1,IY) < 9E10) THEN
            FIELD(I,IY) = SMTH4 * FIELD(I,IY)                          &
-                     + SMTH5 * (FIELD(I-1,IY) + FIELD(I+1,IY))
+                       + SMTH5 * (FIELD(I-1,IY) + FIELD(I+1,IY))
          ENDIF
        ENDDO
 
@@ -108,7 +108,7 @@
          ENDIF
          IF (FIELD(IX,J) < 9E10 .AND. FIELD(IX,J-1) < 9E10 .AND.      &
              FIELD(IX,J+1) < 9E10) THEN
-           FIELD(IX,J) = SMTH4 * FIELD(IX,J)                            &
+           FIELD(IX,J) = SMTH4 * FIELD(IX,J)                          &
                        + SMTH5 * (FIELD(IX,J-1) + FIELD(IX,J+1))
          ENDIF
        ENDDO
