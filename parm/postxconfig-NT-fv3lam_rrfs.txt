@@ -1,7 +1,7 @@
 2
 220
 268
-BGDAWP
+PRSLEV
 32769
 ncep_nco
 v2003
@@ -9933,7 +9933,7 @@ surface
 ?
 ?
 ?
-BGRD3D
+NATLEV
 32769
 ncep_nco
 v2003
