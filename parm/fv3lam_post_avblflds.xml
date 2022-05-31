@@ -5189,7 +5189,7 @@
     <param>
        <post_avblfldidx>702</post_avblfldidx>
        <shortname>GSD_MAX_LTG_THREAT1_ON_ENTIRE_ATMOS</shortname>
-       <pname>LTGTHREAT1</pname>
+       <pname>LTNGTH1</pname>
        <fixed_sfc1_type>entire_atmos</fixed_sfc1_type>
        <scale>3.0</scale>
     </param>
@@ -5197,7 +5197,7 @@
     <param>
        <post_avblfldidx>703</post_avblfldidx>
        <shortname>GSD_MAX_LTG_THREAT2_ON_ENTIRE_ATMOS</shortname>
-       <pname>LTGTHREAT2</pname>
+       <pname>LTNGTH2</pname>
        <fixed_sfc1_type>entire_atmos</fixed_sfc1_type>
        <scale>3.0</scale>
     </param>
@@ -5205,7 +5205,7 @@
     <param>
        <post_avblfldidx>704</post_avblfldidx>
        <shortname>GSD_MAX_LTG_THREAT3_ON_ENTIRE_ATMOS</shortname>
-       <pname>LTNG</pname>
+       <pname>LTNGTH1</pname>
        <fixed_sfc1_type>entire_atmos</fixed_sfc1_type>
        <scale>3.0</scale>
     </param>
@@ -5678,6 +5678,85 @@
        <scale>4.0</scale>
     </param>
 
+    <param>
+       <post_avblfldidx>979</post_avblfldidx>
+       <shortname>SBTA187_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA187</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>980</post_avblfldidx>
+       <shortname>SBTA188_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA188</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>981</post_avblfldidx>
+       <shortname>SBTA189_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA189</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>982</post_avblfldidx>
+       <shortname>SBTA1810_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA1810</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>983</post_avblfldidx>
+       <shortname>SBTA1811_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA1811</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>984</post_avblfldidx>
+       <shortname>SBTA1812_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA1812</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>985</post_avblfldidx>
+       <shortname>SBTA1813_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA1813</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>986</post_avblfldidx>
+       <shortname>SBTA1814_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA1814</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>987</post_avblfldidx>
+       <shortname>SBTA1815_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA1815</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
+       <post_avblfldidx>988</post_avblfldidx>
+       <shortname>SBTA1816_ON_TOP_OF_ATMOS</shortname>
+       <pname>SBTA1816</pname>
+       <fixed_sfc1_type>top_of_atmos</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
 
   </post_avblflds>
 </postxml>
