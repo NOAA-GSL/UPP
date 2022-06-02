@@ -3276,7 +3276,6 @@
            DPBND = 300.E2
            CALL CALCAPE(ITYPE,DPBND,P1D,T1D,Q1D,LB2,EGRID1,     &
                         EGRID2,EGRID3,EGRID4,EGRID5)
-           IF (SUBMODELNAME == 'RTMA') MUMIXR(I,J) = Q1D(I,J)
            IF (IGET(584)>0) THEN
 ! dong add missing value to cin
                GRID1 = spval
@@ -3448,7 +3447,6 @@
 
 
       IF (SUBMODELNAME == 'RTMA')THEN
-
 !
 ! --- Effective (inflow) Layer (EL)
 !
@@ -3561,25 +3559,28 @@
 !       
 !    CAPE AND CINS 0-3KM, FOLLOW ML PROCEDURE WITH HEIGHT 0-3KM
 !
-         FIELD1=.FALSE.
-         FIELD2=.FALSE.
-!
-         IF(IGET(032)>0)THEN
-           IF(LVLS(3,IGET(032))>0)FIELD1=.TRUE.
-         ENDIF
-         IF(IGET(107)>0)THEN
-           IF(LVLS(3,IGET(107))>0)FIELD2=.TRUE.
-         ENDIF
-!
-         IF(IGET(950)>0)THEN
+         IF (MODELNAME == 'RAPR') THEN 
+           FIELD1=.FALSE.
+           FIELD2=.FALSE.
+
+           IF(IGET(032)>0)THEN
+             IF(LVLS(3,IGET(032))>0)FIELD1=.TRUE.
+           ENDIF
+           IF(IGET(107)>0)THEN
+             IF(LVLS(3,IGET(107))>0)FIELD2=.TRUE.
+           ENDIF
+
+           IF(IGET(950)>0)THEN
+             FIELD1=.TRUE.
+           ENDIF
+           IF(IGET(951)>0)THEN
+             FIELD2=.TRUE.
+           ENDIF
+
+         ELSE !FV3R and others
            FIELD1=.TRUE.
-         ENDIF
-         IF(IGET(951)>0)THEN
            FIELD2=.TRUE.
          ENDIF
-!
-!         IF(FIELD1)ITYPE=2
-!         IF(FIELD2)ITYPE=2
 
          IF(FIELD1.OR.FIELD2)THEN
            ITYPE = 2
@@ -3933,7 +3934,7 @@
              DO J=JSTA,JEND
                DO I=1,IM
                   IF(LLOW(I,J)<spval.and.LUPP(I,J)<spval) THEN
-                       MIDCAL=INT(LLOW(I,J)+D50*(LUPP(I,J)-LLOW(I,J)))       
+                       MIDCAL=INT(LLOW(I,J)+D50*(IEQL(I,J)-LLOW(I,J)))       
                                                             !mid-layer 
                                                             !vertical
                                                             !index
