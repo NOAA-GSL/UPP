@@ -6432,7 +6432,7 @@
     <param>
        <post_avblfldidx>702</post_avblfldidx>
        <shortname>GSD_MAX_LTG_THREAT1_ON_ENTIRE_ATMOS</shortname>
-       <pname>LTGTHREAT1</pname>
+       <pname>LTNGTH1</pname>
        <fixed_sfc1_type>entire_atmos</fixed_sfc1_type>
        <scale>3.0</scale>
     </param>
@@ -6440,7 +6440,7 @@
     <param>
        <post_avblfldidx>703</post_avblfldidx>
        <shortname>GSD_MAX_LTG_THREAT2_ON_ENTIRE_ATMOS</shortname>
-       <pname>LTGTHREAT2</pname>
+       <pname>LTNGTH2</pname>
        <fixed_sfc1_type>entire_atmos</fixed_sfc1_type>
        <scale>3.0</scale>
     </param>
@@ -6448,7 +6448,7 @@
     <param>
        <post_avblfldidx>704</post_avblfldidx>
        <shortname>GSD_MAX_LTG_THREAT3_ON_ENTIRE_ATMOS</shortname>
-       <pname>LTNG</pname>
+       <pname>LTNGTH1</pname>
        <fixed_sfc1_type>entire_atmos</fixed_sfc1_type>
        <scale>3.0</scale>
     </param>
