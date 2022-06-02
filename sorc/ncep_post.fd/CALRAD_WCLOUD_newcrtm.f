@@ -289,7 +289,7 @@
     if (iget(n) > 0) post_abig17=.true.
   enddo
   post_abig18=.false.
-  do n = 979, 979+9  ! 937 set in RQSTFLD.f
+  do n = 530, 530+9  ! 530 set in RQSTFLD.f
     if (iget(n) > 0) post_abig18=.true.
   enddo
   post_abigr=.false.
@@ -440,14 +440,14 @@
      ! GOES-18 
      if(post_abig18)then
        nchanl=0
-       do n = 979, 979+9  ! 979 set in RQSTFLD.f
+       do n = 530, 530+9  ! 530 set in RQSTFLD.f
          if (iget(n) > 0) then
            nchanl = nchanl+1
          endif
        enddo
        if (nchanl > 0 .and. nchanl <10) then
-         do n = 979, 979+9  ! 979 set in RQSTFLD.f
-           if (iget(n) == 0) channelinfo(21)%Process_Channel(n-979+1)=.False.
+         do n = 530, 530+9  ! 530 set in RQSTFLD.f
+           if (iget(n) == 0) channelinfo(21)%Process_Channel(n-530+1)=.False.
          enddo
        endif
      endif
