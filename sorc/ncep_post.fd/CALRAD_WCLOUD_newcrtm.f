@@ -440,13 +440,13 @@
      ! GOES-18 
      if(post_abig18)then
        nchanl=0
-       do n = 531, 531+9  ! 530 set in RQSTFLD.f
+       do n = 531, 531+9  ! 531 set in RQSTFLD.f
          if (iget(n) > 0) then
            nchanl = nchanl+1
          endif
        enddo
        if (nchanl > 0 .and. nchanl <10) then
-         do n = 531, 531+9  ! 530 set in RQSTFLD.f
+         do n = 531, 531+9  ! 531 set in RQSTFLD.f
            if (iget(n) == 0) channelinfo(21)%Process_Channel(n-531+1)=.False.
          enddo
        endif
