@@ -289,7 +289,7 @@
     if (iget(n) > 0) post_abig17=.true.
   enddo
   post_abig18=.false.
-  do n = 530, 530+9  ! 530 set in RQSTFLD.f
+  do n = 531, 531+9  ! 531 set in RQSTFLD.f
     if (iget(n) > 0) post_abig18=.true.
   enddo
   post_abigr=.false.
@@ -440,14 +440,14 @@
      ! GOES-18 
      if(post_abig18)then
        nchanl=0
-       do n = 530, 530+9  ! 530 set in RQSTFLD.f
+       do n = 531, 531+9  ! 530 set in RQSTFLD.f
          if (iget(n) > 0) then
            nchanl = nchanl+1
          endif
        enddo
        if (nchanl > 0 .and. nchanl <10) then
-         do n = 530, 530+9  ! 530 set in RQSTFLD.f
-           if (iget(n) == 0) channelinfo(21)%Process_Channel(n-530+1)=.False.
+         do n = 531, 531+9  ! 530 set in RQSTFLD.f
+           if (iget(n) == 0) channelinfo(21)%Process_Channel(n-531+1)=.False.
          enddo
        endif
      endif
@@ -2124,10 +2124,11 @@
                    endif
                  enddo ! channel loop
               end if  ! end of outputting goes 17
+!             Wm Lewis updated idx for g18 on 3 JUN 2022
               if (isis=='abi_g18')then  ! writing goes 16 to grib
                  nc=0
                  do ixchan=1,10
-                   igot=iget(978+ixchan)
+                   igot=iget(530+ixchan)
                    ichan=ixchan
                    if(igot>0)then
                     do j=jsta,jend
