@@ -7869,6 +7869,7 @@
        <post_avblfldidx>986</post_avblfldidx>
        <shortname>UEID_ON_EFL</shortname>
        <pname>UEID</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
@@ -7877,6 +7878,7 @@
        <post_avblfldidx>987</post_avblfldidx>
        <shortname>VEID_ON_EFL</shortname>
        <pname>VEID</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
@@ -7885,6 +7887,7 @@
        <post_avblfldidx>988</post_avblfldidx>
        <shortname>E3KH_ON_EFL</shortname>
        <pname>E3KH</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
@@ -7893,6 +7896,7 @@
        <post_avblfldidx>989</post_avblfldidx>
        <shortname>STPC_ON_EFL</shortname>
        <pname>STPC</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
@@ -7901,6 +7905,7 @@
        <post_avblfldidx>990</post_avblfldidx>
        <shortname>SIGT_ON_EFL</shortname>
        <pname>SIGT</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
@@ -7909,6 +7914,7 @@
        <post_avblfldidx>991</post_avblfldidx>
        <shortname>SCCP_ON_EFL</shortname>
        <pname>SCCP</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
@@ -7917,6 +7923,7 @@
        <post_avblfldidx>992</post_avblfldidx>
        <shortname>MLFC_ON_EFL</shortname>
        <pname>MLFC</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
@@ -7925,6 +7932,7 @@
        <post_avblfldidx>993</post_avblfldidx>
        <shortname>SIGH_ON_EFL</shortname>
        <pname>SIGH</pname>
+       <table_info>NCEP</table_info>
        <fixed_sfc1_type>level_free_convection</fixed_sfc1_type>
        <scale>6.0</scale>
     </param>
