@@ -6375,6 +6375,8 @@
 
       integer :: i, j, k, jj
 
+      write(*,*) 'igetfld in qpf_comp:', igetfld
+
 !     Read in reference grid.
       INQUIRE(FILE=compfile, EXIST=file_exists)
       if (file_exists) then
