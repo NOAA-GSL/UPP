@@ -18,8 +18,8 @@
 !> 2022-03-22 | Wen Meng      | Read PWAT from model
 !> 2022-04-08 | Bo Cui        | 2D decomposition for unified fv3 read interfaces
 !> 2022-06-05 | Hui-Ya Chuang | Modify dx/dy computation for RRFS domain over north pole
-!> 2022-07-10 | Wen Meng | Output lat/lon on four coner points of rotated lat-lon grids in text file.
-!> 2022-07-18 | Wen Meng | Read instant top of atmos ULWRF from model
+!> 2022-07-10 | Wen Meng      | Output lat/lon on four coner points of rotated lat-lon grids in text file.
+!> 2022-07-18 | Wen Meng      | Read instant top of atmos ULWRF from model
 !>
 !> @author Hui-Ya Chuang @date 2016-03-04
       SUBROUTINE INITPOST_NETCDF(ncid2d,ncid3d)
@@ -73,7 +73,7 @@
               ista, iend, ista_2l, iend_2u,iend_m
       use gridspec_mod, only: maptype, gridtype, latstart, latlast, lonstart, lonlast, cenlon,  &
               dxval, dyval, truelat2, truelat1, psmapf, cenlat,lonstartv, lonlastv, cenlonv,    &
-              latstartv,latlastv,cenlatv,latstart_r,latlast_r,lonstart_r,lonlast_r, STANDLON,  &
+              latstartv, latlastv,cenlatv,latstart_r,latlast_r,lonstart_r,lonlast_r, STANDLON,  &
               latse,lonse,latnw,lonnw
       use upp_physics, only: fpvsnew
 !- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
