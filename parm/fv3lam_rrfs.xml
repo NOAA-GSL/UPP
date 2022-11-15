@@ -1908,6 +1908,11 @@
            <scale>5.0</scale>
        </param>
 
+       <param>
+           <shortname>HOURLY_WILDFIRE_POT</shortname>
+           <scale>5.0</scale>
+       </param>
+
     </paramset>
 
     <paramset>

@@ -201,6 +201,7 @@
       deallocate(swupt)
       deallocate(mean_frp)
       deallocate(ebb)
+      deallocate(hwp)
       deallocate(smoke)
       deallocate(taod5502d)
       deallocate(aerasy2d)

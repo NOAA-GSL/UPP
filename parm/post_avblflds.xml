@@ -6900,6 +6900,16 @@
     </param>
 
     <param>
+       <post_avblfldidx>755</post_avblfldidx>
+       <shortname>HOURLY_WILDFIRE_POT</shortname>
+       <pdstmpl>tmpl4_0</pdstmpl>
+       <pname>FIREDIDX</pname>
+       <table_info>NCEP</table_info>
+       <fixed_sfc1_type>surface</fixed_sfc1_type>
+       <scale>4.0</scale>
+    </param>
+
+    <param>
        <post_avblfldidx>756</post_avblfldidx>
        <shortname>GSD_PRES_ON_HGHST_TROP_FRZ_LVL</shortname>
        <longname>GSD_pressure on Highest tropospheric freezing level</longname>

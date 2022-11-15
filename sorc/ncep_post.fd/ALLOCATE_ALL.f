@@ -602,6 +602,7 @@
       allocate(sndepac(ista_2l:iend_2u,jsta_2l:jend_2u))
       allocate(mean_frp(ista_2l:iend_2u,jsta_2l:jend_2u))
       allocate(ebb(ista_2l:iend_2u,jsta_2l:jend_2u))
+      allocate(hwp(ista_2l:iend_2u,jsta_2l:jend_2u))
 !Initialization
 !$omp parallel do private(i,j)
       do j=jsta_2l,jend_2u

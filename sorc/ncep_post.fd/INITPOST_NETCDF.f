@@ -57,7 +57,7 @@
               avisbeamswin,avisdiffswin,airbeamswin,airdiffswin,refdm10c_max,wspd10max, &
               alwoutc,alwtoac,aswoutc,aswtoac,alwinc,aswinc,avgpotevp,snoavg, &
               ti,aod550,du_aod550,ss_aod550,su_aod550,oc_aod550,bc_aod550,prate_max, &
-              pwat, ebb
+              pwat, ebb, hwp
       use soil,  only: sldpth, sllevel, sh2o, smc, stc
       use masks, only: lmv, lmh, htm, vtm, gdlat, gdlon, dx, dy, hbm2, sm, sice
       use physcons_post, only: grav => con_g, fv => con_fvirt, rgas => con_rd,                     &
@@ -669,7 +669,7 @@
                                      'delz','icmr','rwmr',              &
                                      'snmr','grle','smoke','dust',      &
                                      'smoke_ext','dust_ext',            &
-                                     'ebb_smoke_hr']
+                                     'ebb_smoke_hr','hwp']
       else
        nrec=8
        allocate (recname(nrec))
@@ -1032,6 +1032,8 @@
        spval,recname(18),extdust(ista_2l,jsta_2l,1),lm)
        call read_netcdf_2d_para(ncid2d,ista,ista_2l,iend,iend_2u,jsta,jsta_2l,jend,jend_2u,       &
        spval,recname(19),ebb(ista_2l,jsta_2l))
+       call read_netcdf_2d_para(ncid2d,ista,ista_2l,iend,iend_2u,jsta,jsta_2l,jend,jend_2u,       &
+       spval,recname(20),hwp(ista_2l,jsta_2l))
 
 ! calculete CWM from FV3 output
        do l=1,lm
