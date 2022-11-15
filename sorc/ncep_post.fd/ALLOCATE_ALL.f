@@ -629,6 +629,7 @@
           sndepac(i,j)=spval
           mean_frp(i,j)=spval
           ebb(i,j)=spval
+          hwp(i,j)=spval
         enddo
       enddo
       allocate(smoke(ista_2l:iend_2u,jsta_2l:jend_2u,lm,nbin_sm))
