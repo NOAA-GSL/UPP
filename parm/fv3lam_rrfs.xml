@@ -1909,7 +1909,8 @@
        </param>
 
        <param>
-           <shortname>HOURLY_WILDFIRE_POT</shortname>
+           <shortname>HWP_ON_SURFACE</shortname>
+           <pname>FWINX</pname>
            <scale>5.0</scale>
        </param>
 

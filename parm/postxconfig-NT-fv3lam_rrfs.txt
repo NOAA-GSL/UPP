@@ -10490,12 +10490,12 @@ entire_atmos_single_lyr
 ?
 ?
 755
-HOURLY_WILDFIRE_POT
-?
+HWP_ON_SURFACE
+Hourly Wildfire Potential on surface
 1
 tmpl4_0
 FWINX
-NCEP
+?
 ?
 surface
 0
