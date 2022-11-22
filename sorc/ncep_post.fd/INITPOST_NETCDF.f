@@ -34,8 +34,7 @@
               o3vdiff, o3prod, o3tndy, mwpv, unknown, vdiffzacce, zgdrag,cnvctummixing,         &
               vdiffmacce, mgdrag, cnvctvmmixing, ncnvctcfrac, cnvctumflx, cnvctdmflx,           &
               cnvctzgdrag, sconvmois, cnvctmgdrag, cnvctdetmflx, duwt, duem, dusd, dudp,        &
-              wh, qqg, ref_10cm, qqnifa, qqnwfa, pmtf, ozcon, extsmoke, extdust,                &
-              aextc55, taod5503d
+              wh, qqg, ref_10cm, qqnifa, qqnwfa, pmtf, ozcon, aextc55, taod5503d
 
       use vrbls2d, only: f, pd, fis, pblh, ustar, z0, ths, qs, twbs, qwbs, avgcprate,           &
               cprate, avgprec, prec, lspa, sno, sndepac, si, cldefi, th10, q10, tshltr, pshltr, &
@@ -176,6 +175,7 @@
       real, allocatable :: div3d(:,:,:)
       real(kind=4),allocatable :: vcrd(:,:)
       real                     :: dum_const 
+      real, allocatable :: extsmoke(:,:,:), extdust(:,:,:)
 
 ! AQF
 
@@ -224,6 +224,10 @@
                           ,axyl1j(:,:,:), axyl2j(:,:,:), axyl3j(:,:,:) &
                           ,pm25ac(:,:,:), pm25at(:,:,:), pm25co(:,:,:)
 
+      if (modelname == 'FV3R') then
+         allocate(extsmoke(ista_2l:iend_2u,jsta_2l:jend_2u,lm))
+         allocate(extdust(ista_2l:iend_2u,jsta_2l:jend_2u,lm))
+      endif
 
       if (me == 0) print *,' aqfcmaq_on=', aqfcmaq_on
 
@@ -2607,6 +2611,7 @@
 ! E. James - 27 Sep 2022: this is for RRFS, adding smoke and dust
 ! extinction; it needs to be after ZINT is defined.
 !
+      if (modelname == 'FV3R') then
       do l = 1, lm
        do j = jsta_2l, jend_2u
         do i = ista_2l, iend_2u
@@ -2622,6 +2627,9 @@
         end do
        end do
       end do
+      deallocate(extsmoke)
+      deallocate(extdust)
+      endif
 
 !$omp parallel do private(i,j)
       do j=jsta,jend
