@@ -318,7 +318,7 @@
         alpha = 15.0
         r_bar = 0.0002
 
-        print *, i,j
+!        print *, i,j
 
 
         if (si(i,j) .ge. 1.0) then
@@ -336,14 +336,14 @@
             !print *, "C_r", C_r
             !print *, "c_z", c_z
             !print *, "c_alpha", c_alpha
-            print *, "sno/SWE", sno(i,j)
-            print *, "si/SNOD", si(i,j)/1.0e3
-            print *, "rho_sno", rho_sno
-            print *, "vis_blsn", vis_blsn
-            print *, "BETABLSN", BETABLSN
+            !print *, "sno/SWE", sno(i,j)
+            !print *, "si/SNOD", si(i,j)/1.0e3
+            !print *, "rho_sno", rho_sno
+            !print *, "vis_blsn", vis_blsn
+            !print *, "BETABLSN", BETABLSN
         else
             BETABLSN = 0
-            print *, "BETABLSN", BETABLSN
+            !print *, "BETABLSN", BETABLSN
         end if
 
 ! Key calculation of attenuation from each hydrometeor type (cloud, snow, graupel, rain, ice)

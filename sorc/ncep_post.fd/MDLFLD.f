@@ -3518,7 +3518,7 @@ refl_adj:           IF(REF_10CM(I,J,L)<=DBZmin) THEN
 !
 ! --- GSD VISIBILITY WITH BLSN
 !
-      IF (IGET(414)>0) THEN
+      IF (IGET(438)>0) THEN
         CALL CALVIS_GSD(CZEN,VIS,1)
         DO J=JSTA,JEND
         DO I=ista,iend
@@ -3527,8 +3527,8 @@ refl_adj:           IF(REF_10CM(I,J,L)<=DBZmin) THEN
         END DO
         if(grib=="grib2") then
          cfld=cfld+1
-         fld_info(cfld)%ifld=IAVBLFLD(IGET(414))
-         fld_info(cfld)%lvl=LVLSXML(1,IGET(414))
+         fld_info(cfld)%ifld=IAVBLFLD(IGET(438))
+         fld_info(cfld)%lvl=LVLSXML(1,IGET(438))
          datapd(1:iend-ista+1,1:jend-jsta+1,cfld)=GRID1(ista:iend,jsta:jend)
         endif
       ENDIF
