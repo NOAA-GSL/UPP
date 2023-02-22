@@ -4571,7 +4571,7 @@ surface
 ?
 438
 GSD_BLSN_ON_SURFACE
-GSD_visibility on surface
+GSD_blsn on surface
 1
 tmpl4_0
 VISBSN
@@ -17500,7 +17500,7 @@ surface
 ?
 438
 GSD_BLSN_ON_SURFACE
-GSD_visibility on surface
+GSD_blsn on surface
 1
 tmpl4_0
 VISBSN
