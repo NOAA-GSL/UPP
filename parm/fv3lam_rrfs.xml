@@ -1933,6 +1933,16 @@
        </param>
 
        <param>
+           <shortname>COARSEPM_ON_SPEC_HGT_LVL_ABOVE_GRND_8m</shortname>
+           <scale>6.0</scale>
+       </param>
+
+       <param>
+           <shortname>COARSEPM_ON_ENTIRE_ATMOS_SINGLE_LYR</shortname>
+           <scale>5.0</scale>
+       </param>
+
+       <param>
            <shortname>AOD_ON_ENTIRE_ATMOS_SINGLE_LYR</shortname>
            <scale>5.0</scale>
        </param>
