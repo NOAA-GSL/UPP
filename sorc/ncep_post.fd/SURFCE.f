@@ -2179,7 +2179,7 @@
 !
 ! E. James - 23 Feb 2023: COARSEPM from RRFS on lowest model level
 !
-         IF (IGET(804)>0) THEN
+         IF (IGET(1014)>0) THEN
            GRID1=SPVAL
            DO J=JSTA,JEND
              DO I=ISTA,IEND
@@ -2189,7 +2189,7 @@
            ENDDO
            if(grib=='grib2') then
              cfld=cfld+1
-             fld_info(cfld)%ifld=IAVBLFLD(IGET(804))
+             fld_info(cfld)%ifld=IAVBLFLD(IGET(1014))
              datapd(1:iend-ista+1,1:jend-jsta+1,cfld) = GRID1(ista:iend,jsta:jend)
            endif
          ENDIF
@@ -6705,7 +6705,7 @@
       character(len=256), intent(in) :: compfile
       integer, intent(in) :: igetfld,fcst
       integer :: trange,invstat
-      real, dimension(IM,JM) :: outgrid
+      real, dimension(ista:iend,jsta:jend) :: outgrid
 
       real, allocatable, dimension(:,:) :: mscValue
 
@@ -6717,6 +6717,8 @@
       logical :: file_exists
 
       integer :: i, j, k, ii, jj
+
+      outgrid = 0
 
 !     Read in reference grid.
       INQUIRE(FILE=compfile, EXIST=file_exists)
@@ -6768,13 +6770,9 @@
                   outgrid(I,J) = 1.0
                ELSE IF (fcst .GT. 1 .AND. AVGPREC_CONT(I,J)*FLOAT(IFHR)*3600.*1000./DTQ2 .GT. mscValue(I,J)) THEN
                   outgrid(I,J) = 1.0
-               ELSE
-                  outgrid(I,J) = 0.0
                ENDIF
             ENDDO
          ENDDO
-       ELSE
-         outgrid = 0.0*AVGPREC
        ENDIF
       ENDIF
 !      write(*,*) 'FFG MAX, MIN:', &
