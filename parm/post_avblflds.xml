@@ -3859,6 +3859,15 @@
 
 <!--438-442-->
 
+    <param>
+       <post_avblfldidx>438</post_avblfldidx>
+       <shortname>GSD_BLSN_ON_SURFACE</shortname>
+       <longname>GSD_blsn on surface</longname>
+       <pname>VISBSN</pname>
+       <fixed_sfc1_type>surface</fixed_sfc1_type>
+       <scale>6.0</scale>
+    </param>
+
 <!--443-->
     <param>
        <post_avblfldidx>443</post_avblfldidx>
