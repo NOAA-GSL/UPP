@@ -865,6 +865,12 @@
        </param>
 
        <param>
+       <shortname>GSD_BLSN_ON_SURFACE</shortname>
+       <pname>VISBSN</pname>
+       <scale>6.0</scale>
+       </param>
+
+       <param>
        <shortname>HGT_ON_LVL_OF_ADIAB_COND_FROM_SFC</shortname>
        <pname>HGT</pname>
        <scale>5.0</scale>
@@ -3197,6 +3203,12 @@
        <param>
        <shortname>GSD_VIS_ON_SURFACE</shortname>
        <pname>VIS</pname>
+       <scale>6.0</scale>
+       </param>
+
+       <param>
+       <shortname>GSD_BLSN_ON_SURFACE</shortname>
+       <pname>VISBSN</pname>
        <scale>6.0</scale>
        </param>
 
