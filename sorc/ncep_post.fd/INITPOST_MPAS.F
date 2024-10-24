@@ -21,6 +21,7 @@
 !> 2024-08-30 | Jaymes Kenyon| Add temporary hard coding of SLLEVEL (for RUC LSM) and PREC_ACC_DT
 !> 2024-09-09 | Eric James   | Add checks for missing values before entering some computations
 !> 2024-10-16 | Jaymes Kenyon| Missing-value checks for wind interp, fix to LH flux 
+!> 2024-10-24 | Eric James   | Reinstate reading of prec_acc_dt from MPASSIT output
 !>
 !> @author Jaymes Kenyon (GSL) @date 2024-08-14
 
@@ -3119,9 +3120,8 @@ endif  ! 1==2
       if (me==0) print*,'DT= ',DT
 
 !need to get period of time for precipitation buckets
-      !call ext_ncd_get_dom_ti_real(DataHandle,'PREC_ACC_DT',tmp,1,ioutcount,istatus)
-      !prec_acc_dt=abs(tmp)
-      prec_acc_dt=360.0 ! temporary hard-coding for MPAS
+      call ext_ncd_get_dom_ti_real(DataHandle,'PREC_ACC_DT',tmp,1,ioutcount,istatus)
+      prec_acc_dt=abs(tmp)
       if (me==0) print*,'PREC_ACC_DT= ',prec_acc_dt
 
 !need to get period of time for precipitation bucket 1 (15-min precip)
