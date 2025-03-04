@@ -21,8 +21,11 @@ case $(hostname -f) in
   dlogin0[1-9].dogwood.wcoss2.ncep.noaa.gov)  MACHINE_ID=wcoss2 ;; ### dogwood01-9
   dlogin10.dogwood.wcoss2.ncep.noaa.gov)      MACHINE_ID=wcoss2 ;; ### dogwood10
 
-  gaea5[1-8])          MACHINE_ID=gaea ;; ### gaea51-58
-  gaea5[1-8].ncrc.gov) MACHINE_ID=gaea ;; ### gaea51-58
+  gaea5[1-8])          MACHINE_ID=gaeac5 ;; ### gaea51-58
+  gaea5[1-8].ncrc.gov) MACHINE_ID=gaeac5 ;; ### gaea51-58
+
+  gaea6[1-8])          MACHINE_ID=gaeac6 ;; ### gaea61-68
+  gaea6[1-8].ncrc.gov) MACHINE_ID=gaeac6 ;; ### gaea61-68
 
   hfe0[1-9]) MACHINE_ID=hera ;;   ### hera01-09
   hfe1[01]) MACHINE_ID=hera ;;   ### hera10-11
@@ -33,7 +36,7 @@ case $(hostname -f) in
   fe[1-8]) MACHINE_ID=jet ;; ### jet1-8
   tfe[12]) MACHINE_ID=jet ;; ### tjet1-2
 
-  Orion-login-[1-4].HPC.MsState.Edu) MACHINE_ID=orion ;; ### orion1-4
+  [Oo]rion-login-[1-4].[Hh][Pp][Cc].[Mm]s[Ss]tate.[Ee]du) MACHINE_ID=orion ;; ### orion1-4
 
   [Hh]ercules-login-[1-4].[Hh][Pp][Cc].[Mm]s[Ss]tate.[Ee]du) MACHINE_ID=hercules ;; ### hercules1-4
 
@@ -76,16 +79,20 @@ elif [[ -d /scratch1 ]]; then
   # We are on NOAA Hera
   MACHINE_ID=hera
 elif [[ -d /work ]]; then
-  # We are on MSU Orion or Hercules
-  if [[ -d /apps/other ]]; then
+  # We are on MSU Orion or Hercules, check the home mount
+  mount=$(findmnt -n -o SOURCE /home)
+  if [[ ${mount} =~ "hercules" ]]; then
     # We are on Hercules
     MACHINE_ID=hercules
   else
     MACHINE_ID=orion
   fi
-elif [[ -d /gpfs && -d /ncrc ]]; then
-  # We are on GAEA.
-  MACHINE_ID=gaea
+elif [[ -d /gpfs/f5 ]]; then
+  # We are on GAEA-C5.
+  MACHINE_ID=gaeac5
+elif [[ -d /gpfs/f6 ]]; then
+  # We are on GAEA-C6.
+  MACHINE_ID=gaeac6
 elif [[ -d /data/prod ]]; then
   # We are on SSEC's S4
   MACHINE_ID=s4
